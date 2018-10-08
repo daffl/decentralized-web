@@ -1,0 +1,20 @@
+{
+  "name": "slide-template",
+  "description": "The YYCJS slide template",
+  "version": "0.3.1",
+  "private": true,
+  "homepage": "http://yycjs.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yycjs/slide-template.git"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "devDependencies": {
+    "cleaver": "^0.8.7"
+  },
+  "scripts": {
+    "build": "cleaver --debug slides.md"
+  }
+}
