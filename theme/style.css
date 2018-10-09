@@ -10,35 +10,37 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 100;
   color: #333333;
   margin: 0;
 }
 
 a {
-  color: #EF2537;
-}
-
-h1, h2, h3 {
-  font-family: serif;
+  color: #e4517f;
 }
 
 h1 {
-  font-weight: normal;
+  font-weight: 200;
   margin: 20px 0 20px 0;
-  color: #EF2537;
+  color: #4b4df1;
 }
 
 h2 {
-  color: #EF2537;
-  font-weight: normal;
+  color: #4b4df1;
+  font-weight: 200;
   font-size: 200%;
   margin: 20px 0;
 }
 
+blockquote {
+  width: 80%;
+  margin: 2em auto;
+  font-size: 1.2em;
+}
+
 h3 {
-  font-weight: normal;
+  font-weight: 200;
 }
 
 p {
@@ -190,12 +192,12 @@ pre {
 
 .progress-bar {
   height: 10px;
-  background-color: #EF2537;
-  background-image: -webkit-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -moz-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -o-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -ms-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: linear-gradient(left, #EF2537, #FFFFFF);
+  background-color: #e4517f;
+  background-image: -webkit-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -moz-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -o-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -ms-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: linear-gradient(left, #e4517f, #FFFFFF);
   height: 10px;
 }
 
@@ -206,13 +208,12 @@ pre {
 }
 
 .intro h1 {
-  color: #333333;
   margin-bottom: 8%;
 }
 
 .intro h2 {
   font-family: sans-serif;
-  font-size: 150%;
+  font-size: 1.2em;
   color: #333333;
 }
 

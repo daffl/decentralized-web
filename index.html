@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Getting ready for the decentralized web</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Raleway:100,300,400,500,700">
   <link rel="stylesheet" href="theme/font-awesome.css">
   <style type="text/css">
     body {
@@ -370,35 +370,37 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 100;
   color: #333333;
   margin: 0;
 }
 
 a {
-  color: #EF2537;
-}
-
-h1, h2, h3 {
-  font-family: serif;
+  color: #e4517f;
 }
 
 h1 {
-  font-weight: normal;
+  font-weight: 200;
   margin: 20px 0 20px 0;
-  color: #EF2537;
+  color: #4b4df1;
 }
 
 h2 {
-  color: #EF2537;
-  font-weight: normal;
+  color: #4b4df1;
+  font-weight: 200;
   font-size: 200%;
   margin: 20px 0;
 }
 
+blockquote {
+  width: 80%;
+  margin: 2em auto;
+  font-size: 1.2em;
+}
+
 h3 {
-  font-weight: normal;
+  font-weight: 200;
 }
 
 p {
@@ -550,12 +552,12 @@ pre {
 
 .progress-bar {
   height: 10px;
-  background-color: #EF2537;
-  background-image: -webkit-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -moz-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -o-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: -ms-linear-gradient(left, #EF2537, #FFFFFF);
-  background-image: linear-gradient(left, #EF2537, #FFFFFF);
+  background-color: #e4517f;
+  background-image: -webkit-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -moz-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -o-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: -ms-linear-gradient(left, #e4517f, #FFFFFF);
+  background-image: linear-gradient(left, #e4517f, #FFFFFF);
   height: 10px;
 }
 
@@ -566,13 +568,12 @@ pre {
 }
 
 .intro h1 {
-  color: #333333;
   margin-bottom: 8%;
 }
 
 .intro h2 {
   font-family: sans-serif;
-  font-size: 150%;
+  font-size: 1.2em;
   color: #333333;
 }
 
@@ -594,47 +595,57 @@ pre {
 
   <div class="slide  intro" id="slide-1">
     <section class="slide-content"><h1 id="getting-ready-for-the-decentralized-web">Getting ready for the decentralized web</h1>
-<h2 id="by-daffl">By <a href="https://twitter.com/daffl">@daffl</a></h2>
-<h2 id="daffl-github-io-not-so-weird-js"><a href="https://daffl.github.io/not-so-weird-js">daffl.github.io/not-so-weird-js</a></h2>
+<h2 id="feathers-chat-hashbase-io"><a href="https://feathers-chat.hashbase.io">feathers-chat.hashbase.io</a></h2>
+<h2 id="by-daffl">by <a href="https://twitter.com/daffl">@daffl</a></h2>
 </section>
   </div>
   <div class="slide hidden -" id="slide-2">
     <section class="slide-content"><h2 id="what-is-the-decentralized-web-">What is the decentralized web?</h2>
-<p>A world wide web where information is not controlled by any one entity and where the creators decide how that information can be used.</p>
+<blockquote>
+<p>A world wide web where information is not controlled by any single entity and where the creators decide how their information can be used.</p>
+</blockquote>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h2 id="the-original-web">The original web</h2>
-<ol start="0">
+    <section class="slide-content"><h2 id="current-challenges-of-the-web">Current challenges of the web</h2>
+<blockquote>
+<ul>
 <li>Implicit trust</li>
 <li>No built-in publishing</li>
-<li>No identity</li>
+<li>No identity or concept of ownership</li>
 <li>Not easy to pay or get paid</li>
-</ol>
+</ul>
+</blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-4">
+  <div class="slide hidden  centered" id="slide-4">
     <section class="slide-content"><h2 id="centralize-all-the-things-">Centralize all the things!</h2>
+<p><img src="img/allthethings.png" alt="All the logos" style="width: 60%;"></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
     <section class="slide-content"><h2 id="the-decentralized-web">The decentralized web</h2>
-<ol>
-<li>Distributed file systems<ul>
-<li>DAT, IPFS</li>
+<ul>
+<li>Trust: Blockchain, Consensus Protocols</li>
+<li>Publishing: Distributed file systems<ul>
+<li><a href="https://datproject.org/">DAT</a>, <a href="https://beakerbrowser.com">Beaker Browser</a>, <a href="https://ipfs.io/">IPFS</a></li>
 </ul>
 </li>
-<li>No identity
-- </li>
-<li>Not easy to pay or get paid<ul>
-<li>Cryptocurrencies</li>
+<li>Identity and ownership:<ul>
+<li><a href="https://solid.inrupt.com/">Solid</a></li>
+<li>Crypto wallets (e.g. <a href="https://brave.com/">Brave browser</a>, <a href="https://www.opera.com/crypto">Opera</a>)</li>
+<li>Tokens and smart contracts  </li>
 </ul>
 </li>
-</ol>
+<li>Payment: Cryptocurrencies</li>
+</ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
+  <div class="slide hidden  centered" id="slide-6">
     <section class="slide-content"><h2 id="demo">Demo</h2>
+<p>A peer to peer chat application in the <a href="https://beakerbrowser.com">Beaker Browser</a></p>
+<p><a href="https://feathers-chat.hashbase.io">feathers-chat.hashbase.io</a></p>
+<p><img src="https://docs.feathersjs.com/guides/chat/assets/chat.gif" alt="Feathers chat" style="width: 500px;"></p>
 </section>
   </div>
 
