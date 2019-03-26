@@ -1,20 +1,21 @@
 {
-  "name": "slide-template",
-  "description": "The YYCJS slide template",
+  "name": "decentralized-web",
+  "description": "Getting ready for the decentralized web",
   "version": "0.3.1",
   "private": true,
-  "homepage": "http://yycjs.com",
+  "homepage": "https://bidali.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yycjs/slide-template.git"
+    "url": "git@github.com:daffl/decentralized-web.git"
   },
   "engines": {
-    "node": "~0.10.0"
-  },
-  "devDependencies": {
-    "cleaver": "^0.8.7"
+    "node": "^11.0.0"
   },
   "scripts": {
-    "build": "cleaver --debug slides.md"
+    "start": "mdx-deck slides.mdx",
+    "build": "mdx-deck build deck.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^2.0.5"
   }
 }
