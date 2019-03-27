@@ -1,26 +1,29 @@
 import { Head } from 'mdx-deck'
 import { Image } from 'mdx-deck'
+import { CodeSurfer } from 'mdx-deck-code-surfer'
+import highlighter from 'prism-react-renderer/themes/dracula';
 export { default as theme } from './theme'
 
 <Head>
-  <title>Getting ready for the decentralized web</title>
+  <title>What's a decentralized web?</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Raleway:100,300,400,500,700" />
 </Head>
 
 # What's a decentralized web?
 
-## [feathers-chat.hashbase.io](https://feathers-chat.hashbase.io)
-## by [@daffl](https://twitter.com/daffl)
+### by [@daffl](https://twitter.com/daffl)
 
 ---
 
 # Hi I'm David. I like
 
-- FeathersJS
-- Rock Climbing 🧗‍♂️
-- Industrial music
-- Weird instruments
-- SciFi 🌌🚀🤖
-- Ice cream
+- 👐 Open Source 💻 ([FeathersJS](https://feathersjs.com/))
+- Community ([Cowork & Coffee](https://www.meetup.com/codecoffeeyvr/), [Nodeschool YVR](https://nodeschool.io/vancouver/))
+- 🧗‍♂️ Rock Climbing 🧗🏽
+- 🏭 Industrial music 🔊
+- Weird instruments 📯
+- 🚀 SciFi 🤖
+- 🍦 Ice cream 🍨
 
 ---
 
@@ -28,20 +31,27 @@ export { default as theme } from './theme'
 
 ---
 
-```html
-GET /index.html
-Accept application/html
+<CodeSurfer
+  theme={highlighter}
+  code={require("!raw-loader!./snippets/http.html").default}
+  lang="html"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [1, 5] },
+    { range: [7, 11] },
+    { range: [13, 25] }
+  ]}
+/>
 
-<html>
-  <head>My title</head>
-  <body>
-    My content
-    <a href="http://otherserver.com/article/index.html">
-      Other content
-    </a>
-  </body>
-</html>
-```
+---
+
+# Current challenges of the web
+
+> - Implicit trust
+> - No built-in publishing
+> - No identity or concept of ownership
+> - Not easy to pay or get paid
 
 ---
 
@@ -58,15 +68,6 @@ Convert any data of any size to data of fixed size
 ### Public/Private keys
 
 public keys which may be disseminated widely, and private keys which are known only to the owner.
-
----
-
-# Current challenges of the web
-
-> - Implicit trust
-> - No built-in publishing
-> - No identity or concept of ownership
-> - Not easy to pay or get paid
 
 ---
 

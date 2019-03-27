@@ -1,28 +1,21 @@
+import { default as theme } from 'mdx-deck/themes'
+
 export default {
-  googleFont: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Raleway:100,300,400,500,700',
+  ...theme,
   // add a custom font
   font: 'Roboto,Helvetica Neue,Helvetica,Arial,sans-serif',
   css: {
+    fontSize: '30px',
     fontWeight: 200
   },
   // custom colors
   colors: {
-  },
-  a: {
-    color: '#e4517f'
-  },
-  h2: {
-    fontWeight: 200,
-    color: '#e4517f'
+    ...theme.colors,
+    heading: '#4b4df1',
+    link: '#e4517f'
   },
   h1: {
     color: '#4b4df1',
-    fontWeight: 300
-  },
-  li: {
-    fontSize: '42px'
-  },
-  p: {
-    fontSize: '42px'
+    fontWeight: 200
   }
 }
