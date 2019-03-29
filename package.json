@@ -12,8 +12,8 @@
     "node": "^11.0.0"
   },
   "scripts": {
-    "start": "mdx-deck slides.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "start": "mdx-deck slides.mdx -p 8081",
+    "build": "rm -rf dist/ && mdx-deck build slides.mdx --no-html && cp -R img/ dist/img && cp styles.css dist/"
   },
   "devDependencies": {
     "mdx-deck": "^1.10.2",

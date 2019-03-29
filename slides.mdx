@@ -1,29 +1,47 @@
 import { Head } from 'mdx-deck'
 import { Image } from 'mdx-deck'
 import { CodeSurfer } from 'mdx-deck-code-surfer'
-import highlighter from 'prism-react-renderer/themes/dracula';
+import highlighter from 'prism-react-renderer/themes/ultramin';
 export { default as theme } from './theme'
 
 <Head>
-  <title>What's a decentralized web?</title>
+  <title>Decentralized Web, What?</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Raleway:100,300,400,500,700" />
+  <link rel="stylesheet" href="styles.css" />
 </Head>
 
-# What's a decentralized web?
+# Decentralized Web, What?
 
+### [vanjs-decentralized.hashbase.io](https://vanjs-decentralized.hashbase.io), [feathers-chat.hashbase.io](https://feathers-chat.hashbase.io)
 ### by [@daffl](https://twitter.com/daffl)
 
 ---
 
-# Hi I'm David. I like
+# Hi, I'm David. I like
 
-- 👐 Open Source 💻 ([FeathersJS](https://feathersjs.com/))
-- Community ([Cowork & Coffee](https://www.meetup.com/codecoffeeyvr/), [Nodeschool YVR](https://nodeschool.io/vancouver/))
+- 💻 Open Source: [FeathersJS](https://feathersjs.com/)
+- 🗺️ Community: [Cowork & Coffee](https://www.meetup.com/codecoffeeyvr/), [Nodeschool](https://nodeschool.io/vancouver/)
 - 🧗‍♂️ Rock Climbing 🧗🏽
 - 🏭 Industrial music 🔊
-- Weird instruments 📯
-- 🚀 SciFi 🤖
+- 🚀 Science Fiction 🤖
 - 🍦 Ice cream 🍨
+- BC 🍺 more than 🇩🇪🍺
+
+---
+
+# Today I'd like to talk about
+
+- A short history of the WWW 🌍
+- Network types 
+- Cryptography 🔐
+- Distributed file systems 📂
+- Solid
+- Ethereum
+- Demo: A decentralized chat 💬
+
+---
+
+<Image src="img/timbl.png" size="contain" />
 
 ---
 
@@ -40,18 +58,9 @@ export { default as theme } from './theme'
   steps={[
     { range: [1, 5] },
     { range: [7, 11] },
-    { range: [13, 25] }
+    { range: [13, 28] }
   ]}
 />
-
----
-
-# Current challenges of the web
-
-> - Implicit trust
-> - No built-in publishing
-> - No identity or concept of ownership
-> - Not easy to pay or get paid
 
 ---
 
@@ -59,40 +68,139 @@ export { default as theme } from './theme'
 
 ---
 
-# Cryptography
+# Challenges of the Web 1.0
 
-### Hashes
+- Implicit trust
+- No built-in publishing
+- No identity
+- Not easy to pay or get paid
 
-Convert any data of any size to data of fixed size
+---
 
-### Public/Private keys
+# Interlude: Cryptography
 
-public keys which may be disseminated widely, and private keys which are known only to the owner.
+---
+
+<CodeSurfer
+  title="Hashing function"
+  theme={highlighter}
+  code={require("!raw-loader!./snippets/hashing.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+/>
+
+---
+
+## Public-key Cryptography
+
+```sh
+# Generate private key
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048
+  -out private_key.pem.pem
+
+# Generate public key
+openssl rsa -pubout -in private_key.pem
+  -out public_key.pem
+```
+
+---
+
+# public_key.pem
+
+```sh
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwGbSJdNKAg8Lk3f/P1JQ
+Tox23cnApcEy8e/gBDC0dfz76aO8q+W0XpmltMIwLhol+B9uGPmW3iM7siCVnHox
+ztr/uWvWGHt7mRn1wLzNRh8YxZS9IWqjVMDyp8RzCPdUbkZRSmfuvV/ZVOp1kBRe
+182GiP3ng636bOTuLB538E/CSXQBRzxxKEwC9iXJcM1TFlbV3Pw+7w8Sd+1iR4RQ
+uwmVjFsVO+1DmNAeNu/wjMeM+HoXGa+vYG/7L8zewgIv8R6vE6bqvhFbs1Y/ilEj
+XMEANUJed7J+tUwxG8okPPHFivwbXcN4Far6Esd2SQCmwP8P9fDeC8fzXxx9deWP
+XQIDAQAB
+-----END PUBLIC KEY-----
+```
+
+---
+
+<CodeSurfer
+  title="Public-key Cryptography in NodeJS"
+  theme={highlighter}
+  code={require("!raw-loader!./snippets/encryption.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    { range: [4, 9] },
+    { range: [11, 19] },
+    { range: [25, 29] },
+    { range: [31, 40] }
+  ]}
+/>
 
 ---
 
 # Publishing
 
-## Content addressing
+---
 
-Each file/folder has a unique
+# Distributed file systems
 
+Use hashes instead of URIs to locate content
+
+[ipfs://QmWNbEgL4kbEzvkqwiiep9NDxtvvuGgUHBNhdSUT1iRQbW](ipfs://QmWNbEgL4kbEzvkqwiiep9NDxtvvuGgUHBNhdSUT1iRQbW)
+
+- [IPFS](https://ipfs.io/): A peer-to-peer hypermedia protocol to make the web faster, safer, and more open.
+- [DAT](https://datproject.org/): A peer-to-peer file-syncing protocol
 
 ---
 
 # Solid
 
-Separate data from the applications that use it.
+[Solid](https://solid.inrupt.com/) empowers users and organizations to separate their data from the applications that use it.
+It allows people to look at the same data with different apps at the same time.
 
 ---
 
-## The decentralized web
+<Image src="img/solid-diagram.jpg" size="contain" />
 
-- Trust: Blockchain, Consensus Protocols
-- Publishing: Distributed file systems
-  - [DAT](https://datproject.org/), [Beaker Browser](https://beakerbrowser.com), [IPFS](https://ipfs.io/)
-- Identity and ownership:
-  - [Solid](https://solid.inrupt.com/)
-  - Crypto wallets (e.g. [Brave browser](https://brave.com/), [Opera](https://www.opera.com/crypto))
-  - Tokens and smart contracts  
-- Payment: Cryptocurrencies
+---
+
+<Image src="img/git.png" size="contain" />
+
+---
+
+# Identity and value transfer
+
+---
+
+<img alt="Ethereum logo" src="img/ethereum-logo.svg" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
+ 
+
+[Ethereum](https://www.ethereum.org) is a decentralized platform that runs smart contracts:
+applications that run exactly as programmed without any possibility
+of downtime, censorship, fraud or third-party interference.
+
+---
+
+# Demo: A decentralized chat
+
+[feathers-chat.hashbase.io](https://feathers-chat.hashbase.io)
+
+- Serverless
+- Offline-first
+- Real-time
+- Auto-deploying
+- Live-updating
+- 100% uptime
+
+---
+
+# Thank you!
+
+- [vanjs-decentralized.hashbase.io](https://vanjs-decentralized.hashbase.io)
+- [feathers-chat.hashbase.io](https://feathers-chat.hashbase.io)
+
+
+- [@daffl](https://twitter.com/daffl)
+- [![Bidali logo](img/bidali-logo.png)](https://bidali.com)

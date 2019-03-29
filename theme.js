@@ -1,4 +1,5 @@
 import { default as theme } from 'mdx-deck/themes'
+import highlighter from 'react-syntax-highlighter/styles/prism/atom-dark';
 
 export default {
   ...theme,
@@ -8,6 +9,9 @@ export default {
     fontSize: '30px',
     fontWeight: 200
   },
+  prism: {
+    style: highlighter
+  },
   // custom colors
   colors: {
     ...theme.colors,
@@ -16,6 +20,12 @@ export default {
   },
   h1: {
     color: '#4b4df1',
-    fontWeight: 200
+    fontSize: '2.5em'
+  },
+  h2: {
+    color: '#4b4df1'
+  },
+  a: {
+    textDecoration: 'none'
   }
 }
